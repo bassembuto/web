@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Coffee Shop</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px;
+		}
+
+		nav ul {
+			display: flex;
+			flex-direction: row;
+			list-style: none;
+		}
+
+		nav li {
+			margin: 0 10px;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 8px;
+			transition: 0.5s;
+			border-radius: 8px;
+		}
+
+		nav a:hover {
+			background: #fff;
+			color: #333;
+		}
+
+		#hero {
+			background-image: url(hero.jpg);
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 500px;
+		}
+
+		#hero h2 {
+			font-size: 48px;
+			margin-bottom: 20px;
+			color: #333;
+		}
+
+		#hero p {
+			font-size: 24px;
+			margin-bottom: 30px;
+			color: #333;
+		}
+
+		#hero button {
+			background-color: #fff;
+			color: #333;
+			padding: 10px 20px;
+			font-size: 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		#menu {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 50px 0;
+		}
+
+		.item {
+			margin: 0 20px;
+			text-align: center;
+			padding: 20px;
+			transition: 0.5s;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		.item:hover {
+			box-shadow: 5px 5px 15px #333;
+
+		}
+
+		.item img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			margin-bottom: 20px;
+			border-radius: 8px;
+		}
+
+		.item h3 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.item p {
+			font-size: 18px;
+		}
+
+		#about {
+			background-color: #f2f2f2;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 500px;
+		}
+
+		#about h2 {
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+
+		#about p {
+			font-size: 24px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		#about .con {
+			background-color: #333;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: 0.5s;
+			text-decoration: none;
+		}
+
+		#about .con:hover {
+			background: #fff;
+			color: #333;
+		}
+
+		footer {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			height: 50px;
+		}
+
+		footer p {
+			font-size: 18px;
+		}
+
+		/* styles for screens larger than 768px */
+		@media screen and (min-width: 768px) {
+			body {
+				font-size: 18px;
+			}
+		}
+
+		/* styles for screens smaller than 768px */
+		@media screen and (max-width: 768px) {
+			body {
+				font-size: 16px;
+			}
+		}
+
+		/* Default styles for the menu bar */
+		.menu {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+			background-color: #333;
+			color: #fff;
+		}
+
+		.menu a {
+			color: #fff;
+			text-decoration: none;
+			margin-right: 1rem;
+		}
+
+		/* Media query for smaller screens */
+		@media (max-width: 768px) {
+			.menu {
+				flex-direction: column;
+				justify-content: center;
+				height: 100vh;
+			}
+
+			.menu a {
+				display: block;
+				margin: 0.5rem 0;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.menu {
+				display: none;
+			}
+
+			.hamburger {
+				display: block;
+			}
+		}
+
+		/* .cha-the {
+			color: #fff;
+			background: #333;
+			padding: 8px;
+			font-size: 25px;
+			border: 1px solid #333;
+			border-bottom-right-radius: 8px;
+			border-top: 1px solid #fff;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+
+		.cha-the:hover {
+			background-color: #fff;
+			color: #333;
+			border: none;
+		} */
+		#hero .vm {
+			font-size: 25px;
+			background-color: #333;
+			color: #fff;
+			margin-top: 50px;
+			transition: 0.5s;
+			padding: 8px;
+			text-decoration: none;
+			border-radius: 8px;
+		}
+
+		#hero .vm:hover {
+			background: #fff;
+			color: #333;
+		}
+
+		h1 {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>My Coffee Shop</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- <button class="cha-the">
+		Change
+	</button> -->
+	<main>
+		<section id="hero">
+			<h2>Welcome to My Coffee Shop</h2>
+			<p>Enjoy our freshly brewed coffee and homemade pastries in a cozy atmosphere.</p>
+			<a href="#menu" class="vm">View Menu</a>
+		</section>
+		<section id="menu">
+			<div class="item">
+				<img src="cof.jpg" alt="Coffee">
+				<h3>Coffee</h3>
+				<p>Our coffee is made from the finest beans sourced from around the world.</p>
+			</div>
+			<div class="item">
+				<img src="par.jpg" alt="Pastry">
+				<h3>Pastry</h3>
+				<p>Our pastries are homemade and baked fresh every day.</p>
+			</div>
+			<div class="item">
+				<img src="sa2.jpg" alt="Sandwich">
+				<h3>Sandwich</h3>
+				<p>Our sandwiches are made with high-quality ingredients and served on freshly baked bread.</p>
+			</div>
+		</section>
+		<section id="about">
+			<h2>About Us</h2>
+			<p>We are a family-owned business that takes pride in serving the best coffee and pastries in town. Our cozy
+				atmosphere is perfect for catching up with friends or enjoying a quiet moment alone.</p>
+			<a href="tel:+2001003713835" class="con">Contact Us</a>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Bassem Ayman Al-Aasar. All rights reserved.</p>
+	</footer>
+</body>
+
+</html>
